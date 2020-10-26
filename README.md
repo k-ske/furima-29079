@@ -68,7 +68,6 @@ purchases テーブル
 | postal_code | string     | null: false                    |
 | address     | string     | null: false                    |
 | tel_number  | string     | null: false                    |
-| user        | references | null: false, foreign_key: true |
 | product     | references | null: false, foreign_key: true |
 
 ### Association
