@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-10-26T13:25:35.824Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="Jc4gENLRvWNP2Qc5hPPd" version="13.6.5" pages="2">
+<mxfile host="65bd71144e" modified="2020-10-26T13:47:24.983Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="7qfO-8WvWIKm83i2Xxli" version="13.6.5" pages="2">
     <diagram id="khbNCOSfcX2ffw5WU8ei" name="page_relation">
         <mxGraphModel dx="541" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -121,54 +121,63 @@
         </mxGraphModel>
     </diagram>
     <diagram id="Pcw6g1gthQyN0TGOQr_I" name="table">
-        <mxGraphModel dx="541" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1753" dy="1026" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-0"/>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-1" parent="fX7eJ2AN8tNT_OCk-QNi-0"/>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;backgroundOutline=0;endArrow=ERmany;endFill=1;entryX=0.532;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;bendable=0;" parent="fX7eJ2AN8tNT_OCk-QNi-1" source="fX7eJ2AN8tNT_OCk-QNi-4" target="fX7eJ2AN8tNT_OCk-QNi-6" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="160" y="530" as="targetPoint"/>
+                        <mxPoint x="174" y="340" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;entryX=0.575;entryY=-0.011;entryDx=0;entryDy=0;entryPerimeter=0;" parent="fX7eJ2AN8tNT_OCk-QNi-1" source="fX7eJ2AN8tNT_OCk-QNi-4" target="fX7eJ2AN8tNT_OCk-QNi-8" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="670" y="530" as="targetPoint"/>
+                        <mxPoint x="684" y="340" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="673" y="310"/>
+                            <mxPoint x="687" y="120"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-4" value="Usersテーブル&lt;br&gt;・ニックネーム&lt;br&gt;・メールアドレス&lt;br&gt;・パスワード&lt;br&gt;・氏名（漢字＋カナ）&lt;br&gt;・生年月日" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry x="299" y="250" width="210" height="120" as="geometry"/>
+                    <mxGeometry x="313" y="60" width="210" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="fX7eJ2AN8tNT_OCk-QNi-1" source="fX7eJ2AN8tNT_OCk-QNi-6" target="fX7eJ2AN8tNT_OCk-QNi-8" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="490" y="615" as="targetPoint"/>
+                        <mxPoint x="504" y="425" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-6" value="Productsテーブル&lt;br&gt;・画像&lt;br&gt;・商品名&lt;br&gt;・商品説明&lt;br&gt;・商品の詳細&lt;br&gt;（カテゴリー・商品状態）&lt;br&gt;・配送&lt;br&gt;（配送料の負担・発送までの日数・発送元の地域）&lt;br&gt;&lt;br&gt;・user_id" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry y="540" width="298" height="150" as="geometry"/>
+                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-6" value="Productsテーブル&lt;br&gt;・商品名&lt;br&gt;・商品説明&lt;br&gt;・商品の詳細&lt;br&gt;（カテゴリー・商品状態）&lt;br&gt;・配送&lt;br&gt;（配送料の負担・発送までの日数・発送元の地域）&lt;br&gt;&lt;br&gt;・user_id" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
+                    <mxGeometry x="14" y="350" width="298" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;endFill=0;" parent="fX7eJ2AN8tNT_OCk-QNi-1" source="fX7eJ2AN8tNT_OCk-QNi-8" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="300" y="615" as="targetPoint"/>
+                        <mxPoint x="314" y="425" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="460" y="615"/>
-                            <mxPoint x="460" y="615"/>
+                            <mxPoint x="474" y="425"/>
+                            <mxPoint x="474" y="425"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-8" value="Purchasesテーブル&lt;br&gt;・クレジットカード情報&lt;br&gt;（番号・有効期限・CSV)&lt;br&gt;・配送先&lt;br&gt;（郵便番号・住所・電話番号）&lt;br&gt;&lt;br&gt;・user_id&lt;br&gt;・product_id" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry x="500" y="540" width="300" height="150" as="geometry"/>
+                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-8" value="Purchasesテーブル&lt;br&gt;・user_id&lt;br&gt;・product_id" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
+                    <mxGeometry x="514" y="350" width="300" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-9" value="has_many :products&lt;br&gt;has_many :purchases" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry x="200" y="200" width="150" height="60" as="geometry"/>
+                    <mxGeometry x="214" y="10" width="150" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-10" value="belongs_to :user&lt;br&gt;belongs_to :product" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry x="460" y="675" width="120" height="60" as="geometry"/>
+                <mxCell id="fX7eJ2AN8tNT_OCk-QNi-10" value="belongs_to :user&lt;br&gt;belongs_to :product&lt;br&gt;has_one :ship" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
+                    <mxGeometry x="474" y="485" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="fX7eJ2AN8tNT_OCk-QNi-11" value="belongs_to :user&lt;br&gt;has_one :purchase" style="whiteSpace=wrap;html=1;" parent="fX7eJ2AN8tNT_OCk-QNi-1" vertex="1">
-                    <mxGeometry x="220" y="675" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="234" y="485" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="h5onK_PvOuedgbclT6Xp-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;" edge="1" parent="fX7eJ2AN8tNT_OCk-QNi-1" source="h5onK_PvOuedgbclT6Xp-0" target="fX7eJ2AN8tNT_OCk-QNi-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="h5onK_PvOuedgbclT6Xp-0" value="Shipsテーブル&lt;br&gt;・郵便番号&lt;br&gt;・都道府県&lt;br&gt;・住所&lt;br&gt;・電話番号" style="whiteSpace=wrap;html=1;" vertex="1" parent="fX7eJ2AN8tNT_OCk-QNi-1">
+                    <mxGeometry x="559" y="580" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="h5onK_PvOuedgbclT6Xp-1" value="belongs_to :purchase" style="whiteSpace=wrap;html=1;" vertex="1" parent="fX7eJ2AN8tNT_OCk-QNi-1">
+                    <mxGeometry x="480" y="660" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
