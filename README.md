@@ -65,9 +65,6 @@ purchases テーブル
 
 | Column      | Type       | Options                        |
 | ------      | ---------- | ------------------------------ |
-| number      | string     | null: false                    |
-| valid_date  | string     | null: false                    |
-| CSV         | string     | null: false                    |
 | postal_code | string     | null: false                    |
 | address     | string     | null: false                    |
 | tel_number  | string     | null: false                    |
