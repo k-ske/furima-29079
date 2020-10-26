@@ -45,16 +45,16 @@ Things you may want to cover:
 
 ## products テーブル
 
-| Column     | Type       | Options                        |
-| ------     | ------     | -----------                    |
-| name       | string     | null: false                    |
-| content    | string     | null: false                    |
-| category   | string     | null: false                    |
-| status     | string     | null: false                    |
-| ship_cost  | string     | null: false                    |
-| from_area  | string     | null: false                    |
-| day_to_get | string     | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------        | ------     | -----------                    |
+| name          | string     | null: false                    |
+| content       | string     | null: false                    |
+| category_id   | integer    | null: false                    |
+| status_id     | integer    | null: false                    |
+| ship_cost_id  | integer    | null: false                    |
+| from_area_id  | integer    | null: false                    |
+| day_to_get_id | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 
