@@ -72,7 +72,7 @@ purchases テーブル
 
 - belongs_to :user
 - belongs_to :product
-- has_one :
+- has_one :ship
 
 
  ships テーブル
