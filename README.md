@@ -48,7 +48,7 @@ Things you may want to cover:
 | Column        | Type       | Options                        |
 | ------        | ------     | -----------                    |
 | name          | string     | null: false                    |
-| content       | string     | null: false                    |
+| content       | text       | null: false                    |
 | category_id   | integer    | null: false                    |
 | status_id     | integer    | null: false                    |
 | ship_cost_id  | integer    | null: false                    |
