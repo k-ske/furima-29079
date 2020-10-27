@@ -81,7 +81,9 @@ purchases テーブル
 | ------        | ---------- | ------------------------------ |
 | postal_code   | string     | null: false                    |
 | prefecture_id | integer    | null: false                    |
-| address       | string     | null: false                    |
+| city          | string     | null: false                    |
+| house_number  | string     | null: false                    |
+| building      | string     |                                |
 | tel_number    | string     | null: false                    |
 
 ### Association
