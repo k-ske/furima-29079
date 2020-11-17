@@ -15,8 +15,8 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid 
       end
       it "passwordが6文字以上で登録できる" do
-        @user.password = "123456"
-        @user.password_confirmation = "123456"
+        @user.password = "12345abc"
+        @user.password_confirmation = "12345abc"
         expect(@user).to be_valid
       end
 
@@ -34,6 +34,13 @@ RSpec.describe User, type: :model do
         @user.email = ""  
         @user.valid?
         expect(@user.errors.full_messages).to include("Email can't be blank")
+      end
+      it "emailに@が含まれていなければ登録できない" do
+        @user.email = "aaaa"
+        @user.valid?
+      
+        expect(@user.errors.full_messages).to include("Email is invalid")
+        
       end
       it "重複したemailがある場合、登録できない" do
         @user.save
