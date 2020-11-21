@@ -1,7 +1,12 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :user, :category, :status, :ship_cost, :prefecture, :day_to_get
   
+  belongs_to :user
+  belongs_to_active_hash :category
+  belongs_to_active_hash :status
+  belongs_to_active_hash :ship_cost
+  belongs_to_active_hash :prefecture
+  belongs_to_active_hash :day_to_get
 
   has_one_attached :image
   with_options presence: true do
@@ -14,5 +19,6 @@ class Product < ApplicationRecord
     validates :ship_cost_id, numericality: { other_than: 1 } 
     validates :prefecture_id, numericality: { other_than: 1 } 
     validates :day_to_get_id, numericality: { other_than: 1 } 
+  end
 
 end
