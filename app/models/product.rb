@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  has_one_attached :image
   with_options presence: true do
     validates :name
     validates :content
@@ -9,4 +10,5 @@ class Product < ApplicationRecord
     validates :day_to_get_id
     validates :price
     validates :user
+    validates :image
 end
