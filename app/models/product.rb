@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :category, :status
+  belongs_to :category, :status, :ship_cost
 
   has_one_attached :image
   with_options presence: true do
@@ -16,5 +16,5 @@ class Product < ApplicationRecord
     validates :image
     validates :category_id, numericality: { other_than: 1 } 
     validates :status_id, numericality: { other_than: 1 } 
-
+    validates :ship_cost_id, numericality: { other_than: 1 } 
 end
