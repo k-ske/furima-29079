@@ -19,7 +19,8 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = "12345abc"
         expect(@user).to be_valid
       end
-
+    end
+    context '新規登録がうまくいかないとき' do
       it "nicknameが空だと登録できない" do
         @user.nickname = ""  
         @user.valid?
@@ -38,9 +39,7 @@ RSpec.describe User, type: :model do
       it "emailに@が含まれていなければ登録できない" do
         @user.email = "aaaa"
         @user.valid?
-      
         expect(@user.errors.full_messages).to include("Email is invalid")
-        
       end
       it "重複したemailがある場合、登録できない" do
         @user.save
@@ -114,7 +113,6 @@ RSpec.describe User, type: :model do
         @user.first_name_kana = "ﾀﾛｳﾞ"
         @user.valid?
         expect(@user.errors.full_messages).to include("First name kana Full-width katakana characters")
-      
       end
       it "first_name_kanaが漢字・ひらがなだと登録できない" do
         @user.first_name_kana = "太郎"
@@ -125,7 +123,6 @@ RSpec.describe User, type: :model do
         @user.birthday = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
-      
       end
     end 
   end
