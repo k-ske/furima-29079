@@ -9,6 +9,7 @@ class Product < ApplicationRecord
   belongs_to_active_hash :day_to_get
 
   has_one_attached :image
+  
   with_options presence: true do
     validates :name, length: { maximum: 40 }
     validates :content, length: { maximum: 1000 }
