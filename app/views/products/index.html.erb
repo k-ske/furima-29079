@@ -125,13 +125,13 @@
     <h2 class='title'>ピックアップカテゴリー</h2>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='item-lists'>
-      <% if @product.present? %>
+      <% if @products.present? %>
         <%# @productにデータが入っている場合① %>
-        <% @products. each do |product|%>
+        <% @products.each do |product|%>
         <li class='list'>
           <%= link_to "#" do %>
           <div class='item-img-content'>
-            <%= image_tag <%= @product.image %>, class: "item-img" %>
+            <%= image_tag product.image, class: "item-img" %>
 
             <%# 商品が売れていればsold outを表示しましょう %>
             <div class='sold-out'>
@@ -142,10 +142,10 @@
           </div>
           <div class='item-info'>
             <h3 class='item-name'>
-              <%= @product.name %>
+              <%= product.name %>
             </h3>
             <div class='item-price'>
-              <span><%= @product.price %>円<br><%= @product.ship_cost_id %></span>
+              <span><%= product.price %>円<br><%= product.ship_cost.name %></span>
               <div class='star-btn'>
                 <%= image_tag "star.png", class:"star-icon" %>
                 <span class='star-count'>0</span>
@@ -153,9 +153,10 @@
             </div>
           </div>
           <% end %>
+        <% end %>
         </li>
         <%# //@productにデータが入っている場合① %>
-
+      <% else %>
         <%# @productにデータが入っている場合② %>
         <li class='list'>
           <%= link_to '#' do %>
@@ -174,59 +175,8 @@
           </div>
           <% end %>
         </li>
-        <%# //@productにデータが入っている場合② %>
-
-        <%# @productにデータが入っていない場合① %>
-      <% else %>
-        <li class='list'>
-          <%= link_to "#" do %>
-          <div class='item-img-content'>
-            <%= image_tag "item-sample.png", class: "item-img" %>
-
-            <%# 商品が売れていればsold outを表示しましょう %>
-            <div class='sold-out'>
-              <span>Sold Out!!</span>
-            </div>
-            <%# //商品が売れていればsold outを表示しましょう %>
-
-          </div>
-          <div class='item-info'>
-            <h3 class='item-name'>
-              <%= "商品名" %>
-            </h3>
-            <div class='item-price'>
-              <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
-              <div class='star-btn'>
-                <%= image_tag "star.png", class:"star-icon" %>
-                <span class='star-count'>0</span>
-              </div>
-            </div>
-          </div>
-          <% end %>
-        </li>
-        <%# //@productにデータが入っていない場合① %>
-   
-        <%# @productにデータが入っていない場合② %>
-        <li class='list'>
-          <%= link_to '#' do %>
-          <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
-          <div class='item-info'>
-            <h3 class='item-name'>
-              商品を出品してね！
-            </h3>
-            <div class='item-price'>
-              <span>99999999円<br>(税込み)</span>
-              <div class='star-btn'>
-                <%= image_tag "star.png", class:"star-icon" %>
-                <span class='star-count'>0</span>
-              </div>
-            </div>
-          </div>
-          <% end %>
-        </li>
-        <%# //@productにデータが入っていない場合② %>
       <% end %>
-    </ul>
+        <%# //@productにデータが入っている場合② %>
   </div>
   <%# /商品一覧 %>
 </div>
