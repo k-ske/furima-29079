@@ -129,7 +129,7 @@
         <%# @producstにデータが入っている場合 %>
         <% @products.each do |product|%>
         <li class='list'>
-          <%= link_to "/products/show" do %>
+          <%= link_to "/products/#{product.id}" do %>
           <div class='item-img-content'>
             <%= image_tag product.image, class: "item-img" %>
 
