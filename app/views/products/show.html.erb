@@ -16,10 +16,10 @@
     </div>
     <div class="item-price-box">
       <span class="item-price">
-        ¥ 999,999,999
+        <%= @product.price%>
       </span>
       <span class="item-postage">
-        <%= '配送料負担' %>
+        <%= @product.ship_cost.name %>
       </span>
     </div>
 
