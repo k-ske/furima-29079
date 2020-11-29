@@ -32,6 +32,7 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
+  
 
 
   private
