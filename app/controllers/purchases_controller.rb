@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
+  before_action :set_product, only: [:index, :create]
+
   def index 
-    @product = Product.find(params[:product_id])
     @user_purchase = UserPurchase.new
   end
 
@@ -20,4 +21,7 @@ class PurchasesController < ApplicationController
     params.require(:user_purchase).permit(:postal_code, :prefecture_id, :city, :house_number, :building, :tel_number).merge(user_id: current_user.id, product_id: params[:product_id])
   end
 
+  def set_product
+    @product = Product.find(params[:product_id])
+  end
 end
