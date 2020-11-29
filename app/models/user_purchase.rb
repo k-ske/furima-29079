@@ -9,9 +9,10 @@ class UserPurchase
     validates :house_number
     validates :tel_number
   end
-  validates :building
+ 
 
   def save
     Purchase.create(user_id: user_id, product_id: product_id)
     Ships.create(postal_code: postal_code, prefecture_id: prefecture_id, city: city, house_number: house_number, building: building, tel_number: tel_number, purchase_id: purchase_id)
+  end
 end
