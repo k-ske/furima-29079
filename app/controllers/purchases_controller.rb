@@ -1,5 +1,6 @@
 class PurchasesController < ApplicationController
   def index 
+
     @user_purchase = UserPurchase.new
   end
 
@@ -17,7 +18,7 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:user_purchase).permit(:postal_code, :prefecture_id, :city, :house_number, :building, :tel_number).merge(purchase_id: purchase_id)
+    params.require(:user_purchase).permit(:postal_code, :prefecture_id, :city, :house_number, :building, :tel_number).merge(purchase_id: params[:purchase_id])
   end
 
 end
