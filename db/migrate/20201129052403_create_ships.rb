@@ -7,7 +7,7 @@ class CreateShips < ActiveRecord::Migration[6.0]
       t.string :house_nubmer,          null: false
       t.string :building
       t.string :tel_number,            null: false
-      t.references :purchase,       null: false, foreign_key: true
+      t.references :purchase,          null: false, foreign_key: true
       t.timestamps
     end
   end
