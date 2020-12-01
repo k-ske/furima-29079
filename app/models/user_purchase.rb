@@ -8,6 +8,7 @@ class UserPurchase
     validates :city
     validates :house_number
     validates :tel_number, format: {with: /\A[0-9]+\z/, message: "input only half-width number"}
+    validates :token
   end
  
   def save

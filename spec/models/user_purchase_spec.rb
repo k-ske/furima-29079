@@ -56,6 +56,11 @@ RSpec.describe UserPurchase, type: :model do
         @user_purchase.valid?
         expect(@user_purchase.errors.full_messages).to include("Tel number input only half-width number")
       end
+      it "tokenが空だと登録できないこと" do
+        @user_purchase.token = ""
+        @user_purchase.valid?
+        expect(@user_purchase.errors.full_messages).to include("Token can't be blank")
+      end
     end
   end
 end
