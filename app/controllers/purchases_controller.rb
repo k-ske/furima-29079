@@ -8,8 +8,9 @@ class PurchasesController < ApplicationController
   def create
     @user_purchase = UserPurchase.new(purchase_params)
     if @user_purchase.valid?
+      pay_product
       @user_purchase.save
-      redirect_to "products#index"
+      return redirect_to root_path
     else
       render :index
     end
@@ -23,5 +24,14 @@ class PurchasesController < ApplicationController
 
   def set_product
     @product = Product.find(params[:product_id])
+  end
+
+  def pay_product
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"] # 自身のPAY.JPテスト秘密鍵を記述しましょう
+    Payjp::Charge.create(
+      amount: Product.find(params[:product_id]).price,  # 商品の値段
+      card: purchase_params[:token],    # カードトークン
+      currency: 'jpy'
+    )
   end
 end
