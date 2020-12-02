@@ -3,9 +3,9 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all.order("created_at DESC")
+    @products = Product.all.order('created_at DESC')
   end
-  
+
   def new
     @product = Product.new
   end
@@ -32,14 +32,11 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
-    if current_user.id == @product.user_id
-      @product.destroy
-    end
+    @product.destroy if current_user.id == @product.user_id
     redirect_to root_path
   end
-
 
   private
 
@@ -50,5 +47,4 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
-
 end
