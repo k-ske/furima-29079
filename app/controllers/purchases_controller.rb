@@ -1,5 +1,6 @@
 class PurchasesController < ApplicationController
   before_action :set_product, only: [:index, :create]
+  before_action :move_to_root_path
 
   def index 
     @user_purchase = UserPurchase.new
@@ -17,6 +18,12 @@ class PurchasesController < ApplicationController
   end
 
   private
+
+  def move_to_root_path
+    unless user_signed_in?
+      redirect_to root_path
+    end
+  end
 
   def purchase_params
     params.require(:user_purchase).permit(:postal_code, :prefecture_id, :city, :house_number, :building, :tel_number).merge(user_id: current_user.id, product_id: params[:product_id], token: params[:token])
