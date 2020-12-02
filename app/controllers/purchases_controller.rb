@@ -2,6 +2,7 @@ class PurchasesController < ApplicationController
   before_action :set_product, only: [:index, :create]
   before_action :move_to_root_path
   before_action :move_to_toppage
+  before_action :move_to_top
 
   def index 
     @user_purchase = UserPurchase.new
@@ -31,6 +32,13 @@ class PurchasesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def move_to_top
+    if Purchase.exists?(product_id: @product.id) 
+      redirect_to root_path
+    end
+  end
+  
 
   def purchase_params
     params.require(:user_purchase).permit(:postal_code, :prefecture_id, :city, :house_number, :building, :tel_number).merge(user_id: current_user.id, product_id: params[:product_id], token: params[:token])
