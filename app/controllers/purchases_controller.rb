@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
   before_action :set_product, only: [:index, :create]
   before_action :move_to_root_path
+  before_action :move_to_toppage
 
   def index 
     @user_purchase = UserPurchase.new
@@ -21,6 +22,12 @@ class PurchasesController < ApplicationController
 
   def move_to_root_path
     unless user_signed_in?
+      redirect_to root_path
+    end
+  end
+
+  def move_to_toppage
+    if current_user.id == @product.user_id
       redirect_to root_path
     end
   end
